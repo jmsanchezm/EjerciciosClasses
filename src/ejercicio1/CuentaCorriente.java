@@ -76,7 +76,7 @@ public class CuentaCorriente {
 	public String toString () {
 		String muestraInformacion = nombre + "\n"+
 									DNI + "\n" +
-									saldo + "\n" + "euros";
+									saldo + "euros";
 		return muestraInformacion;
 	}
 	
