@@ -37,13 +37,11 @@ public class Libro {
 	public boolean Prestamo () {
 		boolean res= false; //Se guardará el resultado
 		//Si el número de ejemplares es mayor a 0
-		if (ejemplares>0) {
+		if (prestados<ejemplares) {
 			//Convertimos a true result
 			res=true;
 			//Sumamos 1 a prestados
 			prestados++;
-			//Y restamos uno a ejemplares
-			ejemplares--;
 		}
 		//Devolvemos res
 		return res;
@@ -55,18 +53,14 @@ public class Libro {
 	 * En caso de que no haya prestado algún libro, res será false
 	 */
 	public boolean Devolucion() {
-		boolean res=true; //Se guardará el resultado
+		boolean res=false; //Se guardará el resultado
 		
 		/*Si el número de presatdo es menor a 0, significará que no
 		 * hay ningún ejemplar prestado
 		 */
-		if (prestados<0) {
+		if (prestados>0) {
 			//Por lo que res se volverá false
-			res=false;
-			//En caso contrario
-		}else {
-			//Se sumará 1 a ejemplares
-			ejemplares++;
+			res=true;
 			//Y restamos 1 a prestados
 			prestados--;
 		}
