@@ -34,6 +34,7 @@ public class Punto {
 	 * @param y
 	 */
 	public void SetXY (int x, int y ) {
-		
+		this.x=x;
+		this.y=y;
 	}
 }
