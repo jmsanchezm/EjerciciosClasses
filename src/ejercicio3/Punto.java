@@ -37,4 +37,25 @@ public class Punto {
 		this.x=x;
 		this.y=y;
 	}
+	
+	/**
+	 * Método que desplaza un punto sumando sus coordenadas
+	 * @param dx
+	 * @param dy
+	 */
+	public void desplaza (int dx,int dy) {
+		x+=dx;
+		y+=dy;
+		System.out.println("(" + x + ", "+ y+")");
+	}
+	
+	/**
+	 * Método que calcula la distancia entre dos puntos
+	 * @param p
+	 */
+	public int distancia (Punto p) {
+		int distancia;
+		distancia= (int)Math.sqrt(((p.x-x)*(p.x-x))+((p.y-y)*(p.y-y)));
+		return distancia;
+	}
 }
